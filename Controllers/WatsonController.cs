@@ -5,20 +5,20 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace my_new_app.Controllers
+namespace NewWatson.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class WatsonController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<WatsonController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WatsonController(ILogger<WatsonController> logger)
         {
             _logger = logger;
         }
@@ -30,7 +30,7 @@ namespace my_new_app.Controllers
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
+                TemperatureC = 666, //rng.Next(-20, 55),
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();

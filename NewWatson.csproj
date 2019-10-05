@@ -7,11 +7,13 @@
     <IsPackable>false</IsPackable>
     <SpaRoot>ClientApp\</SpaRoot>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
-    <RootNamespace>my_new_app</RootNamespace>
+    <RootNamespace>NewWatson</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="IBM.Watson.PersonalityInsights.v3" Version="4.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.0.0" />
+    <PackageReference Include="IBM.Cloud.SDK.Core" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>
